@@ -13,8 +13,9 @@
                 <h4 class="card-title">Project Name: {{ $project["name_project"] }}</h4>
                 </div>
                 <div class="card-body">
-                  <p class="card-text"><strong>Description:</strong> {{ $project["description"] }}</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                  <h6 class="slug-title">Slug title: <i>{{ $project["slug"] }}</i></h6>
+                  <p class="card-text my-3"><strong>Description:</strong> {{ $project["description"] }}</p>
+                  <a href="{{ route("admin.projects.edit", $project) }}" class="btn btn-primary">Update Project</a>
                 </div>   
               </div>
             </div>
