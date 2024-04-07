@@ -27,7 +27,6 @@
                        <a href="{{ route("admin.projects.edit", $project) }}" class="btn btn-warning my-3"><i class="fa-solid fa-pen-to-square"></i></a>
 
                        <button data-bs-target="#delete-project-{{ $project->id }}-modal"  class="btn btn-danger my-3" type="button" class="btn btn-primary" data-bs-toggle="modal"><i class="fa-solid fa-xmark"></i></button>
-                       <!-- href="{{ route("admin.projects.destroy", $project) }}" -->
 
                        </th>
                    </tr>
@@ -54,15 +53,19 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminazione progetto {{ $project->name_project }}</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        HELLO WORLD! 
+        Sei sicuro di voler eliminare il progetto {{ $project->name_project }}?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annulla</button>
+        <form action="{{ route("admin.projects.destroy", $project) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button class="btn btn-warning">Elimina</button>
+        </form>
       </div>
     </div>
   </div>
