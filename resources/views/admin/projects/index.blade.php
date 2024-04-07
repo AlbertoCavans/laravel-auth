@@ -6,7 +6,7 @@
         <a href="{{ route("admin.projects.create") }}" class="btn btn-success my-3"><i class="fa-solid fa-upload me-2"></i>Aggiungere nuovo progetto</a>
         <h1>List Projects</h1>
 
-        <table class="table">
+        <table class="table table-striped border">
             <thead>
                 <tr>
                     <th>Project Name</th>

@@ -1,7 +1,7 @@
 <header>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-secondary text-white">
     <div class="container">
-      <a class="navbar-brand" href="#">Laravel project</a>
+      <a class="navbar-brand" href="#"><h3>Projects portfolio</h3></a>
       <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
         class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button">
         <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,7 @@
           @else
 
             <li class="nav-item">
-                  <a class="nav-link" href="{{ route('admin.projects.index') }}">Projects</a>
+                  <a class="nav-link" href="{{ route('admin.projects.index') }}">Projects List</a>
             </li>
 
             <li class="nav-item dropdown">
