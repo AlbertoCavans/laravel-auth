@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Verify Emial')
-@endsection
+
 
 @section('content')
 <div class="container mt-4">

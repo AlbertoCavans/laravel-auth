@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'List Projects')
-@endsection
+
 
 @section('content')
   <section>
